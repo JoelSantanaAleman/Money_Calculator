@@ -3,11 +3,11 @@ package model;
 import java.util.Objects;
 
 public class Money {
-    private final double number;
+    private final double amount;
     private final Currency currency;
 
     public Money(double amount, Currency currency) {
-        this.number = amount;
+        this.amount = amount;
         this.currency = currency;
     }
 
@@ -18,13 +18,13 @@ public class Money {
     @Override
     public String toString() {
         return "Money{" +
-                "amount=" + number +
+                "amount=" + amount +
                 ", currency=" + currency +
                 '}';
     }
 
     public double getAmount() {
-        return number;
+        return amount;
     }
 
     @Override
@@ -32,12 +32,12 @@ public class Money {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Money money = (Money) o;
-        return Double.compare(number, money.number) == 0 && Objects.equals(currency, money.currency);
+        return Double.compare(amount, money.amount) == 0 && Objects.equals(currency, money.currency);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(number, currency);
+        return Objects.hash(amount, currency);
     }
 
 }

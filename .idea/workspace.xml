@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="448d6fd1-c657-44e3-8918-f336b31622d0" name="Changes" comment="mocks;" />
+    <list default="true" id="448d6fd1-c657-44e3-8918-f336b31622d0" name="Changes" comment="mocks;">
+      <change afterPath="$PROJECT_DIR$/src/main/java/control/Command.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/control/ExchangeRatesCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interfaces/CurrencyDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interfaces/MoneyDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interfaces/MoneyDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interfaces/ExchangeRatesLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfaces/ExchangeRatesLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Money.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Money.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -95,7 +104,23 @@
       <option name="project" value="LOCAL" />
       <updated>1734898438177</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="mocks;">
+      <option name="closed" value="true" />
+      <created>1734898614152</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1734898614152</updated>
+    </task>
+    <task id="LOCAL-00006" summary="mocks;">
+      <option name="closed" value="true" />
+      <created>1734898637534</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1734898637534</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
