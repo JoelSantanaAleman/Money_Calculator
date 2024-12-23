@@ -75,7 +75,6 @@ public class JsonExchangeRatesLoader implements ExchangeRatesLoader {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         Date date = dateFormat.parse(dateString);
 
-
         // Obtenemos las tasas de cambio
         JsonObject ratesObject = jsonObject.getAsJsonObject("rates");
 

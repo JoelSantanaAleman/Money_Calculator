@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TsvFileCoinsLoader implements CoinsLoader {
+
     private final InputStream file;
 
     public TsvFileCoinsLoader(InputStream file) {
@@ -37,10 +38,13 @@ public class TsvFileCoinsLoader implements CoinsLoader {
 
     private Currency toCurrency(String line) {
         String[] split = line.split("\t");
-        if (split.length > 2) {
-            return new Currency(split[0], split[1], split[2]);
-        } else {
-            return new Currency(split[0], split[1], "");
+        if (split.length < 2) {
+            System.err.println("Línea mal formateada: " + line);
+            return null;
         }
+        String symbol = split[0];
+        String description = split[1];
+        String symbolRepresentation = (split.length > 2) ? split[2] : "";
+        return new Currency(symbol, description, symbolRepresentation);
     }
 }
