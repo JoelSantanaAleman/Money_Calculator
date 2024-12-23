@@ -1,9 +1,9 @@
 package swing;
 
-import control.Command;
-import interfaces.CurrencyDialog;
-import interfaces.MoneyDialog;
-import interfaces.MoneyDisplay;
+import control.interfaces.Command;
+import swing.interfaces.CurrencyDialog;
+import swing.interfaces.MoneyDialog;
+import swing.interfaces.MoneyDisplay;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -48,7 +48,7 @@ public class MainFrame extends JFrame {
         // Panel para contener los componentes relacionados con la moneda de destino (To)
         JPanel targetCurrencyPanel = new JPanel();
         targetCurrencyPanel.setLayout(new BoxLayout(targetCurrencyPanel, BoxLayout.X_AXIS));
-        targetCurrencyPanel.setBorder(new EmptyBorder(10, 10, 10, 10)); // Ajustar los márgenes
+        targetCurrencyPanel.setBorder(new EmptyBorder(10, 20, 10, 10)); // Ajustar los márgenes
         JLabel toLabel = new JLabel("To:");
         targetCurrencyPanel.add(toLabel);
         targetCurrencyPanel.add(Box.createHorizontalStrut(10)); // Espacio entre label y recuadro

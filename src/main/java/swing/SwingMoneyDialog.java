@@ -1,9 +1,9 @@
 package swing;
 
-import interfaces.CurrencyDialog;
-import interfaces.MoneyDialog;
 import model.Currency;
 import model.Money;
+import swing.interfaces.CurrencyDialog;
+import swing.interfaces.MoneyDialog;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,4 +1,4 @@
-package interfaces;
+package control.interfaces;
 
 import model.Currency;
 import model.ExchangeRates;

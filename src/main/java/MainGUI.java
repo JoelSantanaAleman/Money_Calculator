@@ -1,9 +1,11 @@
-import control.ExchangeRatesCommand;
-import interfaces.*;
-import mock.JsonExchangeRatesLoader;
-import mock.TsvFileCoinsLoader;
+import control.*;
+import control.interfaces.CoinsLoader;
+import control.interfaces.ExchangeRatesLoader;
 import model.Currency;
+import swing.interfaces.CurrencyDialog;
 import swing.MainFrame;
+import swing.interfaces.MoneyDialog;
+import swing.interfaces.MoneyDisplay;
 
 import java.io.InputStream;
 import java.util.List;

@@ -1,16 +1,17 @@
 package control;
 
-import interfaces.CurrencyDialog;
-import interfaces.ExchangeRatesLoader;
-import interfaces.MoneyDialog;
-import interfaces.MoneyDisplay;
+import control.interfaces.Command;
+import control.interfaces.ExchangeRatesLoader;
+import swing.interfaces.CurrencyDialog;
+import swing.interfaces.MoneyDialog;
+import swing.interfaces.MoneyDisplay;
 import model.Currency;
 import model.ExchangeRates;
 import model.Money;
 
 import java.io.IOException;
 
-public class ExchangeRatesCommand implements Command{
+public class ExchangeRatesCommand implements Command {
     private final MoneyDisplay moneyDisplay;
     private final MoneyDialog moneyDialog;
     private final CurrencyDialog currencyDialog;

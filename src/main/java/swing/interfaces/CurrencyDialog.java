@@ -1,4 +1,4 @@
-package interfaces;
+package swing.interfaces;
 
 import model.Currency;
 

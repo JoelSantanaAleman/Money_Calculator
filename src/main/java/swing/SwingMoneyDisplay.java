@@ -1,7 +1,7 @@
 package swing;
 
-import interfaces.MoneyDisplay;
 import model.Money;
+import swing.interfaces.MoneyDisplay;
 
 import javax.swing.*;
 import java.text.DecimalFormat;

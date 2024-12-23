@@ -1,9 +1,9 @@
-package mock;
+package control;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import interfaces.ExchangeRatesLoader;
+import control.interfaces.ExchangeRatesLoader;
 import model.Currency;
 import model.ExchangeRates;
 
@@ -26,14 +26,13 @@ public class JsonExchangeRatesLoader implements ExchangeRatesLoader {
 
     public void setUrl(Currency base, Currency target) {
         // Por limitaciones de la api no podemos escoger el base no obstante seguiria el mismo patron que para escoger el target.
-        this.url = "http://api.exchangeratesapi.io/v1/latest?access_key=e7a83fdc52a9dac2758d5d8fdc326d4a&symbols=" + target.getCode() + "&format=1";
+        this.url = "http://api.exchangeratesapi.io/v1/latest?access_key=e7a83fdc52a9dac2758d5d8fdc326d4a&symbols="+target.getCode()+"&format=1";
     }
-
     @Override
     public ExchangeRates load(Currency from, Currency to) {
         try {
             String jsonResponse = fetchJsonResponse();
-            exchangeRate = parseJsonResponse(jsonResponse, from, to);
+            exchangeRate =  parseJsonResponse(jsonResponse, from , to);
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ParseException e) {
@@ -75,6 +74,7 @@ public class JsonExchangeRatesLoader implements ExchangeRatesLoader {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         Date date = dateFormat.parse(dateString);
 
+
         // Obtenemos las tasas de cambio
         JsonObject ratesObject = jsonObject.getAsJsonObject("rates");
 
@@ -85,6 +85,10 @@ public class JsonExchangeRatesLoader implements ExchangeRatesLoader {
 
         return new ExchangeRates(from, to, date, exchangeRate);
     }
+
+
+
+
 }
 
 

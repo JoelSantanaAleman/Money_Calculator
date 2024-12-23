@@ -1,6 +1,6 @@
-package mock;
+package control;
 
-import interfaces.CoinsLoader;
+import control.interfaces.CoinsLoader;
 import model.Currency;
 
 import java.io.BufferedReader;
@@ -45,6 +45,6 @@ public class TsvFileCoinsLoader implements CoinsLoader {
         String symbol = split[0];
         String description = split[1];
         String symbolRepresentation = (split.length > 2) ? split[2] : "";
-        return new Currency(symbol, description, symbolRepresentation);
+        return new Currency(symbol, description);
     }
 }

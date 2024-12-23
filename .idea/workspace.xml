@@ -4,17 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="448d6fd1-c657-44e3-8918-f336b31622d0" name="Changes" comment="Control, interfaces;">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/swing/MainFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/swing/SwingCurrencyDialog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/swing/SwingMoneyDialog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/swing/SwingMoneyDisplay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/currencies.tsv" afterDir="false" />
+    <list default="true" id="448d6fd1-c657-44e3-8918-f336b31622d0" name="Changes" comment="swing;">
+      <change afterPath="$PROJECT_DIR$/src/main/java/mock/MockCurrencyDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mock/MockCurrencyLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mock/MockExchangeRateLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mock/MockMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mock/MockMoneyDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mock/MockMoneyDisplay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mock/JsonExchangeRatesLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mock/JsonExchangeRatesLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mock/TsvFileCoinsLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mock/TsvFileCoinsLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/control/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/control/interfaces/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/control/ExchangeRatesCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/control/ExchangeRatesCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interfaces/CoinsLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/control/interfaces/CoinsLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interfaces/CurrencyDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/swing/interfaces/CurrencyDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interfaces/ExchangeRatesLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/control/interfaces/ExchangeRatesLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interfaces/MoneyDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/swing/interfaces/MoneyDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interfaces/MoneyDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/swing/interfaces/MoneyDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mock/JsonExchangeRatesLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/control/JsonExchangeRatesLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mock/TsvFileCoinsLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/control/TsvFileCoinsLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Currency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Currency.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/swing/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/swing/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/swing/SwingCurrencyDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/swing/SwingCurrencyDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/swing/SwingMoneyDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/swing/SwingMoneyDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/swing/SwingMoneyDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/swing/SwingMoneyDisplay.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,10 +72,12 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.MainGUI.executor": "Run",
+    "Application.MockMain.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_directory_selection": "C:/Users/26joe/Documents/UNI/3º año/IS2_/money_viewer/Money_Calculator/src/test/java",
     "last_opened_file_path": "C:/Users/26joe/Documents/UNI/3º año/TERCERO/TERCERO/1º SEMESTRE/IS2/MoneyCalculator"
   }
 }]]></component>
@@ -131,11 +146,30 @@
       <option name="project" value="LOCAL" />
       <updated>1734905713962</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="swing;">
+      <option name="closed" value="true" />
+      <created>1734970893053</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1734970893053</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.tsv" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first classes" />
@@ -143,6 +177,7 @@
     <MESSAGE value="interfaces" />
     <MESSAGE value="mocks;" />
     <MESSAGE value="Control, interfaces;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Control, interfaces;" />
+    <MESSAGE value="swing;" />
+    <option name="LAST_COMMIT_MESSAGE" value="swing;" />
   </component>
 </project>

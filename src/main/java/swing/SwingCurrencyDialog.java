@@ -1,7 +1,7 @@
 package swing;
 
-import interfaces.CurrencyDialog;
 import model.Currency;
+import swing.interfaces.CurrencyDialog;
 
 import javax.swing.*;
 import java.util.List;
